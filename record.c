@@ -22,16 +22,16 @@ int main(void) {
 
         // the string now needs to be parsed using whitespace as a delimiter
         char *command = NULL;
-        char *attribute = NULL;
+        char *argument = NULL;
         command = strtok(buf, SPACE);
        
         // lets verify the command isn't empty
         if (command != NULL) {
-            attribute = strtok(NULL, SPACE);
+            argument = strtok(NULL, SPACE);
         }
 
         // send the command for further processing 
-        runCommand(command, attribute);
+        runCommand(command, argument);
     }
     return 0;
 }
@@ -49,16 +49,16 @@ void initHead() {
 
 
 // Function used to run the command
-void runCommand(char *command, char *attribute) {
+void runCommand(char *command, char *argument) {
     int type = matchType(command);
      switch (type) {
-        case READ:      readRecords(attribute);
+        case READ:      readRecords(argument);
                         break;
-        case WRITE:     writeRecords(attribute);
+        case WRITE:     writeRecords(argument);
                         break;
         case PRINT:     printRecords();
                         break;
-        case DELETE:    deleteRecord(attribute);
+        case DELETE:    deleteRecord(argument);
                         break;
         case QUIT:      quit(); 
                         break;

@@ -29,7 +29,7 @@ void quit();
 int deleteRecord(char *rec_num);
 
 // Helper Functions
-void runCommand(char *command, char *attribute); 
+void runCommand(char *command, char *argument); 
 void initHead();
 void deleteMemory();
 void writeToFile(FILE *fptr);

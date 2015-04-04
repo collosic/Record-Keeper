@@ -7,13 +7,13 @@
 C = gcc
 CFLAGS = -I.
 DEPS = node.h
-OBJ = main.o
+OBJ = record.o
 
 %.o: %.c $(DEPS)
 	$(CC) -g -c -Wall -o $@ $< $(CFLAGS)
 
-main: $(OBJ)
+record: $(OBJ)
 	gcc -o $@ $^ $(CFLAGS)
 
 clean:	
-	rm -f main *.o
+	rm -f record *.o
