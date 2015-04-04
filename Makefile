@@ -10,10 +10,10 @@ DEPS = node.h
 OBJ = main.o
 
 %.o: %.c $(DEPS)
-		$(CC) -g -c -Wall -o $@ $< $(CFLAGS)
+	$(CC) -g -c -Wall -o $@ $< $(CFLAGS)
 
 main: $(OBJ)
-		gcc -o $@ $^ $(CFLAGS)
+	gcc -o $@ $^ $(CFLAGS)
 
-clean:
+clean:	
 	rm -f main *.o
