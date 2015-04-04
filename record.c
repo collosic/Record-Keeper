@@ -1,5 +1,5 @@
 
-// Include any addiontal header files here
+// Include any additional header files here
 #include "node.h"
 
 int main(void) {
