@@ -219,7 +219,7 @@ int deleteRecord(char *rec_num) {
     LNode *current = head;
     LNode *next = (current != NULL) ? current->next : NULL;
 
-    // cycle through he link list until we fine the location
+    // cycle through the link list until we find the correct location
     while (current != NULL) {
         if (num == counter++) {
             if (current == head) {
@@ -242,12 +242,13 @@ int deleteRecord(char *rec_num) {
 
 // function to quit the program
 void quit() {
+    // free all the dynamically allocted nodes and exit
     deleteMemory();
     exit(EXIT_SUCCESS);
 }
 
 
-// function that check whether a string is all digits
+// function that checks whether a string is all digits
 int isInteger(char *arg) {
     while(*arg) {
         if (isdigit(*arg++) == 0) {
