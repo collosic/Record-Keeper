@@ -45,7 +45,7 @@ typedef struct node {
     struct node *next;
 } LNode;
 
-// Records in memory
+// Head of the Link List
 LNode *head;
 
 #endif

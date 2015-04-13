@@ -1,3 +1,8 @@
+/*  Name: Christian Collosi
+ *  ID: 11233529
+ *  ICS 53
+ *  NOTE: Please use the make file to compile or compile with node.h header file
+ */
 
 // Include any additional header files here
 #include "node.h"
