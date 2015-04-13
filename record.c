@@ -136,6 +136,15 @@ int storeIntoMemory(FILE *fptr) {
         return -1; 
     }
     buf[strlen(buf) - 1] = '\0';
+
+    // we can test to make sure we got TABS instead of SPACES
+    char *test = strchr(buf, '\t');
+    if (test == NULL) {
+        // there's no TAB character
+        deleteMemory();
+        puts("The file being read does not contain the TAB character");
+        return -1;
+    }
     while (result != NULL) {
         // extract name, address and phone number
         strcpy(current->name, strtok(buf, TAB));
